@@ -94,36 +94,35 @@
 <li>oracle ready</li>
 <li>swap 확보</li>
 <li>oracle setup</li>
-<li><p>oracle http setup</p>
-<h3 id="network-setting"><a href="#network-setting" class="headerlink" title="network setting"></a>network setting</h3><p>/etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<li>oracle http setup</li>
+</ol>
+<h3 id="1-network-setting"><a href="#1-network-setting" class="headerlink" title="1.network setting"></a>1.network setting</h3><p>/etc/sysconfig/network-scripts/ifcfg-eth0</p>
 <pre><code>ONBOOT=yes
 </code></pre><p>service network restart</p>
-</li>
-</ol>
 <p>yum repolist</p>
 <p>yum update -y</p>
 <p>yum install -y nano</p>
-<h3 id="ui-setting"><a href="#ui-setting" class="headerlink" title="ui setting"></a>ui setting</h3><p>yum groupinstall “X Window System” “Desktop” “Fonts” “Korean Support”</p>
+<h3 id="2-ui-setting"><a href="#2-ui-setting" class="headerlink" title="2.ui setting"></a>2.ui setting</h3><p>yum groupinstall “X Window System” “Desktop” “Fonts” “Korean Support”</p>
 <p>sed -i ‘s/id:3:initdefault:/id:5:initdefault:/’ /etc/inittab</p>
-<h3 id="oracle-ready"><a href="#oracle-ready" class="headerlink" title="oracle ready"></a>oracle ready</h3><p>vi /etc/hosts</p>
+<h3 id="3-oracle-ready"><a href="#3-oracle-ready" class="headerlink" title="3.oracle ready"></a>3.oracle ready</h3><p>vi /etc/hosts</p>
 <pre><code>127.0.0.1 localhost.localdomain localhost hostname.domain hostname
 </code></pre><p>yum install libaio bc flex</p>
 <p>wget ~~~/oracle-xe-11.2.0-1.0.x86_64.rpm.zip</p>
 <p>unzip -q oracle-xe-11.2.0-1.0.x86_64.rpm.zip</p>
-<h3 id="swap-확보"><a href="#swap-확보" class="headerlink" title="swap 확보"></a>swap 확보</h3><p>dd if=/dev/zero of=/home/swapfile bs=1024 count=100m</p>
+<h3 id="4-swap-확보"><a href="#4-swap-확보" class="headerlink" title="4.swap 확보"></a>4.swap 확보</h3><p>dd if=/dev/zero of=/home/swapfile bs=1024 count=100m</p>
 <p>mkswap /home/swapfile</p>
 <p>swapon /home/swapfile</p>
-<h3 id="oracle-setup"><a href="#oracle-setup" class="headerlink" title="oracle setup"></a>oracle setup</h3><p>rpm -ivh oracle-xe-11.2.0-1.0.x86_64.rpm</p>
+<h3 id="5-oracle-setup"><a href="#5-oracle-setup" class="headerlink" title="5.oracle setup"></a>5.oracle setup</h3><p>rpm -ivh oracle-xe-11.2.0-1.0.x86_64.rpm</p>
 <p>/etc/init.d/oracle-xe configure</p>
 <p>. /u01/app/oracle/product/11.2.0/xe/bin/oracle_env.sh</p>
-<h3 id="oracle-http-setup"><a href="#oracle-http-setup" class="headerlink" title="oracle http setup"></a>oracle http setup</h3><p>sqlplus /nolog</p>
+<h3 id="6-oracle-http-setup"><a href="#6-oracle-http-setup" class="headerlink" title="6.oracle http setup"></a>6.oracle http setup</h3><p>sqlplus /nolog</p>
 <p>connect sys/oracle as sysdba</p>
 <p>EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/24/oracle-centos/" data-id="cjcsolnd70006xwckx6dnmj7z" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/24/oracle-centos/" data-id="cjcspymzu000bngcki39e7j8z" class="article-share-link">공유</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos6-oracle-setup/">centos6 oracle setup</a></li></ul>
@@ -170,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/24/hello-world/" data-id="cjcsolncs0001xwckwlpvr28p" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/24/hello-world/" data-id="cjcspymzm0004ngckd7464v8n" class="article-share-link">공유</a>
       
       
     </footer>
@@ -284,7 +283,7 @@ this.request = request;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/12/struts2-session/" data-id="cjcsolnd50005xwckv1p5h7o3" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/12/struts2-session/" data-id="cjcspymzh0002ngckg0ywn0jc" class="article-share-link">공유</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/struts2/">struts2</a></li></ul>
@@ -330,7 +329,7 @@ this.request = request;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/02/java-sublimetext/" data-id="cjcsolncx0003xwckt3wojkbp" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/02/java-sublimetext/" data-id="cjcspymzs0008ngckmrx6gq64" class="article-share-link">공유</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -368,7 +367,7 @@ this.request = request;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/01/maven-pom-xml/" data-id="cjcsolnd80007xwckhn60jiub" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/01/maven-pom-xml/" data-id="cjcspymzt0009ngck86myt8iv" class="article-share-link">공유</a>
       
       
     </footer>
@@ -405,7 +404,7 @@ this.request = request;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/01/git-hexo/" data-id="cjcsolncn0000xwck989hu9w7" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/01/git-hexo/" data-id="cjcspymz70000ngckxu9aztm6" class="article-share-link">공유</a>
       
       
     </footer>
@@ -546,7 +545,7 @@ this.request = request;
 <li>자동연결<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://example.com/&gt;</span><br><span class="line">&lt;address@example.com&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a><br><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#97;&#100;&#x64;&#114;&#101;&#115;&#x73;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;">&#97;&#100;&#x64;&#114;&#101;&#115;&#x73;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;</a></p>
+<p><a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a><br><a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#97;&#100;&#100;&#x72;&#x65;&#115;&#115;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#97;&#100;&#100;&#x72;&#x65;&#115;&#115;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;</a></p>
 <h2 id="2-7-강조"><a href="#2-7-강조" class="headerlink" title="2.7. 강조"></a>2.7. 강조</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*single asterisks*</span><br><span class="line">_single underscores_</span><br><span class="line">**double asterisks**</span><br><span class="line">__double underscores__</span><br><span class="line">++underline++</span><br><span class="line">~~cancelline~~</span><br></pre></td></tr></table></figure>
 <p><em>single asterisks</em><br><em>single underscores</em><br><strong>double asterisks</strong><br><strong>double underscores</strong><br>++underline++<br><del>cancelline</del></p>
 <h2 id="2-8-이미지"><a href="#2-8-이미지" class="headerlink" title="2.8. 이미지"></a>2.8. 이미지</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](/path/to/img.jpg)</span><br><span class="line">![Alt text](/path/to/img.jpg &quot;Optional title&quot;)</span><br></pre></td></tr></table></figure>
@@ -571,7 +570,7 @@ this.request = request;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/01/git-markdown/" data-id="cjcsolncw0002xwckqvgwxao6" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/01/git-markdown/" data-id="cjcspymzc0001ngck77oixndj" class="article-share-link">공유</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-markdown/">git, markdown</a></li></ul>
@@ -659,7 +658,7 @@ this.request = request;
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 class06<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

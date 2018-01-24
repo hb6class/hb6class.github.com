@@ -7,18 +7,18 @@
   
   <title>oracle-centos | 강의노트</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="centos6 oracle setup network setting ui setting oracle ready swap 확보 oracle setup oracle http setup network setting/etc/sysconfig/network-scripts/ifcfg-eth0 ONBOOT=yes service network restart   yum re">
+  <meta name="description" content="centos6 oracle setup network setting ui setting oracle ready swap 확보 oracle setup oracle http setup  1.network setting/etc/sysconfig/network-scripts/ifcfg-eth0 ONBOOT=yes service network restart yum r">
 <meta name="keywords" content="centos6 oracle setup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oracle-centos">
 <meta property="og:url" content="https://hb6class.github.io/2018/01/24/oracle-centos/index.html">
 <meta property="og:site_name" content="강의노트">
-<meta property="og:description" content="centos6 oracle setup network setting ui setting oracle ready swap 확보 oracle setup oracle http setup network setting/etc/sysconfig/network-scripts/ifcfg-eth0 ONBOOT=yes service network restart   yum re">
+<meta property="og:description" content="centos6 oracle setup network setting ui setting oracle ready swap 확보 oracle setup oracle http setup  1.network setting/etc/sysconfig/network-scripts/ifcfg-eth0 ONBOOT=yes service network restart yum r">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2018-01-24T03:19:17.737Z">
+<meta property="og:updated_time" content="2018-01-24T06:54:22.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="oracle-centos">
-<meta name="twitter:description" content="centos6 oracle setup network setting ui setting oracle ready swap 확보 oracle setup oracle http setup network setting/etc/sysconfig/network-scripts/ifcfg-eth0 ONBOOT=yes service network restart   yum re">
+<meta name="twitter:description" content="centos6 oracle setup network setting ui setting oracle ready swap 확보 oracle setup oracle http setup  1.network setting/etc/sysconfig/network-scripts/ifcfg-eth0 ONBOOT=yes service network restart yum r">
   
     <link rel="alternate" href="/atom.xml" title="강의노트" type="application/atom+xml">
   
@@ -97,36 +97,35 @@
 <li>oracle ready</li>
 <li>swap 확보</li>
 <li>oracle setup</li>
-<li><p>oracle http setup</p>
-<h3 id="network-setting"><a href="#network-setting" class="headerlink" title="network setting"></a>network setting</h3><p>/etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<li>oracle http setup</li>
+</ol>
+<h3 id="1-network-setting"><a href="#1-network-setting" class="headerlink" title="1.network setting"></a>1.network setting</h3><p>/etc/sysconfig/network-scripts/ifcfg-eth0</p>
 <pre><code>ONBOOT=yes
 </code></pre><p>service network restart</p>
-</li>
-</ol>
 <p>yum repolist</p>
 <p>yum update -y</p>
 <p>yum install -y nano</p>
-<h3 id="ui-setting"><a href="#ui-setting" class="headerlink" title="ui setting"></a>ui setting</h3><p>yum groupinstall “X Window System” “Desktop” “Fonts” “Korean Support”</p>
+<h3 id="2-ui-setting"><a href="#2-ui-setting" class="headerlink" title="2.ui setting"></a>2.ui setting</h3><p>yum groupinstall “X Window System” “Desktop” “Fonts” “Korean Support”</p>
 <p>sed -i ‘s/id:3:initdefault:/id:5:initdefault:/’ /etc/inittab</p>
-<h3 id="oracle-ready"><a href="#oracle-ready" class="headerlink" title="oracle ready"></a>oracle ready</h3><p>vi /etc/hosts</p>
+<h3 id="3-oracle-ready"><a href="#3-oracle-ready" class="headerlink" title="3.oracle ready"></a>3.oracle ready</h3><p>vi /etc/hosts</p>
 <pre><code>127.0.0.1 localhost.localdomain localhost hostname.domain hostname
 </code></pre><p>yum install libaio bc flex</p>
 <p>wget ~~~/oracle-xe-11.2.0-1.0.x86_64.rpm.zip</p>
 <p>unzip -q oracle-xe-11.2.0-1.0.x86_64.rpm.zip</p>
-<h3 id="swap-확보"><a href="#swap-확보" class="headerlink" title="swap 확보"></a>swap 확보</h3><p>dd if=/dev/zero of=/home/swapfile bs=1024 count=100m</p>
+<h3 id="4-swap-확보"><a href="#4-swap-확보" class="headerlink" title="4.swap 확보"></a>4.swap 확보</h3><p>dd if=/dev/zero of=/home/swapfile bs=1024 count=100m</p>
 <p>mkswap /home/swapfile</p>
 <p>swapon /home/swapfile</p>
-<h3 id="oracle-setup"><a href="#oracle-setup" class="headerlink" title="oracle setup"></a>oracle setup</h3><p>rpm -ivh oracle-xe-11.2.0-1.0.x86_64.rpm</p>
+<h3 id="5-oracle-setup"><a href="#5-oracle-setup" class="headerlink" title="5.oracle setup"></a>5.oracle setup</h3><p>rpm -ivh oracle-xe-11.2.0-1.0.x86_64.rpm</p>
 <p>/etc/init.d/oracle-xe configure</p>
 <p>. /u01/app/oracle/product/11.2.0/xe/bin/oracle_env.sh</p>
-<h3 id="oracle-http-setup"><a href="#oracle-http-setup" class="headerlink" title="oracle http setup"></a>oracle http setup</h3><p>sqlplus /nolog</p>
+<h3 id="6-oracle-http-setup"><a href="#6-oracle-http-setup" class="headerlink" title="6.oracle http setup"></a>6.oracle http setup</h3><p>sqlplus /nolog</p>
 <p>connect sys/oracle as sysdba</p>
 <p>EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hb6class.github.io/2018/01/24/oracle-centos/" data-id="cjcsolnd70006xwckx6dnmj7z" class="article-share-link">공유</a>
+      <a data-url="https://hb6class.github.io/2018/01/24/oracle-centos/" data-id="cjcspymzu000bngcki39e7j8z" class="article-share-link">공유</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos6-oracle-setup/">centos6 oracle setup</a></li></ul>
@@ -222,7 +221,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 class06<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
